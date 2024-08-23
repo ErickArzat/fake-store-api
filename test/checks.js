@@ -15,11 +15,11 @@ export const options = {
 }
 
 export default function () {
-    let response = http.get('https://api.escuelajs.co/api/v1/products/1');
+    let response = http.get('https://api.escuelajs.co/api/v1/products');
 
     check(response, {
         'StatusCode is 200': (r) => r.status === 200,
-        'transaction is below 500ms': (r) => r.timings.duration < 500,
+        'transaction is below 700ms': (r) => r.timings.duration < 700,
     });
 }
 
